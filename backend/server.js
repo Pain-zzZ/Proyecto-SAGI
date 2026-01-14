@@ -1,0 +1,59 @@
+const express = require('express');
+const cors = require('cors');
+const dotenv = require('dotenv');
+
+// Cargar variables de entorno
+dotenv.config();
+
+// Importar rutas
+const authRoutes = require('./routes/authRoutes');
+const productRoutes = require('./routes/productRoutes');
+const categoryRoutes = require('./routes/categoryRoutes');
+const providerRoutes = require('./routes/providerRoutes');
+const dashboardRoutes = require('./routes/dashboardRoutes');
+const movementRoutes = require('./routes/movementRoutes');
+
+// Importar middleware de errores
+const errorHandler = require('./middleware/errorHandler');
+
+// Crear aplicación Express
+const app = express();
+
+// Middlewares globales
+app.use(cors()); // Permitir peticiones desde el frontend
+app.use(express.json()); // Parsear JSON en el body
+app.use(express.urlencoded({ extended: true }));
+
+// Rutas de la API
+app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/categories', categoryRoutes);
+app.use('/api/providers', providerRoutes);
+app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/movements', movementRoutes);
+
+// Ruta de prueba
+app.get('/api', (req, res) => {
+  res.json({
+    message: 'API de SAGI funcionando correctamente',
+    version: '1.0.0',
+    endpoints: {
+      auth: '/api/auth',
+      products: '/api/products',
+      categories: '/api/categories',
+      providers: '/api/providers',
+      dashboard: '/api/dashboard'
+    }
+  });
+});
+
+// Middleware de manejo de errores (debe ir al final)
+app.use(errorHandler);
+
+// Iniciar servidor
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`📊 API disponible en http://localhost:${PORT}/api`);
+  console.log(`🔧 Modo: ${process.env.NODE_ENV || 'development'}`);
+});

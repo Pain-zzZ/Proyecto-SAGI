@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Principal - SAGI</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../resources/favicon.ico" type="image/x-icon" />
+</head>
+<body class="dashboard">
+
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar" role="navigation">
+    <div class="sidebar-header">
+      <h2>SAGI</h2>
+      <button id="closeMenu" class="close-btn" aria-label="Cerrar menú">✖</button>
+    </div>
+
+    <ul class="menu">
+      <li class="has-submenu">
+        <a href="#" class="submenu-toggle">📋 Inventario</a>
+        <ul class="submenu">
+          <li><a href="products.html">📦 Ver productos</a></li>
+          <li><a href="add-product.html">➕ Añadir producto</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#" class="submenu-toggle">🔄 Movimientos</a>
+        <ul class="submenu">
+          <li><a href="movements.html">📊 Ver movimientos</a></li>
+        </ul>
+      </li>
+      <li><a href="#">🧾 Comprobantes</a></li>
+      <li class="has-submenu">
+        <a href="#" class="submenu-toggle">🤝 Proveedores</a>
+        <ul class="submenu">
+          <li><a href="providers.html">📋 Ver proveedores</a></li>
+          <li><a href="add-provider.html">➕ Añadir proveedor</a></li>
+        </ul>
+      </li>
+      <li><a href="users.html">👥 Usuarios</a></li>
+      <li><a href="roles.html">🔐 Roles y Permisos</a></li>
+    </ul>
+
+    <div class="user-info" id="userInfo">
+      <p>👤 <span id="userName">Cargando...</span></p>
+      <p style="font-size: 0.8rem; color: #ccc;">
+        <span id="userRole">...</span>
+      </p>
+    </div>
+
+    <button id="logout" aria-label="Cerrar sesión">🚪 Cerrar sesión</button>
+  </nav>
+
+  <!-- Contenido principal -->
+  <div class="main-content">
+    <header>
+      <button id="openMenu" class="menu-btn" aria-label="Abrir menú">☰</button>
+      <h1>Bienvenido al Sistema Automático de Gestión de Inventario (SAGI)</h1>
+      <p>Selecciona un módulo del menú lateral para comenzar</p>
+    </header>
+
+    <section class="content">
+      <div class="dashboard-stats">
+        <div class="stat-card">
+          <h3>📦 Total Productos</h3>
+          <p class="stat-number" id="totalProducts">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>⚠️ Stock Bajo</h3>
+          <p class="stat-number" id="lowStock">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>🔄 Movimientos Hoy</h3>
+          <p class="stat-number" id="todayMovements">0</p>
+        </div>
+        <div class="stat-card">
+          <h3>🤝 Proveedores</h3>
+          <p class="stat-number" id="totalProviders">0</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Resumen del sistema</h2>
+        <p>Aquí podrás visualizar, registrar y gestionar todos los componentes del inventario de manera eficiente.</p>
+        <p><strong>Estado del sistema:</strong> <span style="color: #4caf50;">✓ Operativo</span></p>
+      </div>
+    </section>
+  </div>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/menu.js"></script>
+  <script src="../js/dashboard.js"></script>
+</body>
+</html>
