@@ -53,7 +53,7 @@ app.get('/api', (req, res) => {
   });
 });
 
-// Middleware de manejo de errores (debe ir al final)
+// Middleware de manejo de errores
 app.use(errorHandler);
 
 // Iniciar servidor
