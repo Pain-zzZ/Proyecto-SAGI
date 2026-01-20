@@ -12,6 +12,9 @@ const categoryRoutes = require('./routes/categoryRoutes');
 const providerRoutes = require('./routes/providerRoutes');
 const dashboardRoutes = require('./routes/dashboardRoutes');
 const movementRoutes = require('./routes/movementRoutes');
+const receiptRoutes = require('./routes/receiptRoutes');
+const userRoutes = require('./routes/userRoutes');
+const roleRoutes = require('./routes/roleRoutes');
 
 // Importar middleware de errores
 const errorHandler = require('./middleware/errorHandler');
@@ -31,6 +34,9 @@ app.use('/api/categories', categoryRoutes);
 app.use('/api/providers', providerRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/movements', movementRoutes);
+app.use('/api/receipts', receiptRoutes);
+app.use('/api/users', userRoutes);
+app.use('/api/roles', roleRoutes);
 
 // Ruta de prueba
 app.get('/api', (req, res) => {

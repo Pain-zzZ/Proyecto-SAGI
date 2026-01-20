@@ -42,6 +42,15 @@ exports.login = async (req, res, next) => {
       });
     }
 
+    // ACTUALIZAR ÚLTIMO ACCESO
+    await db.query(
+      'UPDATE usuario SET ultimoAcceso = NOW() WHERE idUsuario = ?',
+      [user.idUsuario]
+    );
+
+    console.log(`✅ Login exitoso: ${user.nombre} (${user.correo}) - Último acceso actualizado`);
+
+
     // Generar token JWT
     const token = jwt.sign(
       { 

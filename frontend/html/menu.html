@@ -17,6 +17,7 @@
     </div>
 
     <ul class="menu">
+      <li><a href="menu.html" class="menu-home">🏠 Inicio</a></li>    
       <li class="has-submenu">
         <a href="#" class="submenu-toggle">📋 Inventario</a>
         <ul class="submenu">
@@ -30,7 +31,12 @@
           <li><a href="movements.html">📊 Ver movimientos</a></li>
         </ul>
       </li>
-      <li><a href="#">🧾 Comprobantes</a></li>
+      <li class="has-submenu">
+        <a href="#" class="submenu-toggle">🧾 Comprobantes</a>
+        <ul class="submenu">
+          <li><a href="receipts.html">📄 Ver comprobantes</a></li>
+        </ul>
+      </li>
       <li class="has-submenu">
         <a href="#" class="submenu-toggle">🤝 Proveedores</a>
         <ul class="submenu">
@@ -56,8 +62,8 @@
   <div class="main-content">
     <header>
       <button id="openMenu" class="menu-btn" aria-label="Abrir menú">☰</button>
-      <h1>Bienvenido al Sistema Automático de Gestión de Inventario (SAGI)</h1>
-      <p>Selecciona un módulo del menú lateral para comenzar</p>
+      <h1>🏠 Panel Principal - SAGI</h1>
+      <p>Resumen general del sistema de gestión de inventario</p>
     </header>
 
     <section class="content">
@@ -65,25 +71,39 @@
         <div class="stat-card">
           <h3>📦 Total Productos</h3>
           <p class="stat-number" id="totalProducts">0</p>
+          <p class="stat-label">Productos activos</p>
         </div>
-        <div class="stat-card">
+        <div class="stat-card warning">
           <h3>⚠️ Stock Bajo</h3>
           <p class="stat-number" id="lowStock">0</p>
+          <p class="stat-label">Requieren atención</p>
         </div>
-        <div class="stat-card">
+        <div class="stat-card info">
           <h3>🔄 Movimientos Hoy</h3>
           <p class="stat-number" id="todayMovements">0</p>
+          <p class="stat-label">Registros de hoy</p>
         </div>
-        <div class="stat-card">
+        <div class="stat-card success">
           <h3>🤝 Proveedores</h3>
           <p class="stat-number" id="totalProviders">0</p>
+          <p class="stat-label">Proveedores activos</p>
         </div>
       </div>
 
       <div class="card">
-        <h2>Resumen del sistema</h2>
-        <p>Aquí podrás visualizar, registrar y gestionar todos los componentes del inventario de manera eficiente.</p>
-        <p><strong>Estado del sistema:</strong> <span style="color: #4caf50;">✓ Operativo</span></p>
+        <h2>📊 Resumen del sistema</h2>
+        <p>Bienvenido al Sistema Automático de Gestión de Inventario (SAGI). Aquí podrás visualizar, registrar y gestionar todos los componentes del inventario de manera eficiente.</p>
+        <p><strong>Estado del sistema:</strong> <span style="color: #4caf50;">✅ Operativo</span></p>
+        
+        <div style="margin-top: 20px; padding: 15px; background: #f5f5f5; border-radius: 8px;">
+          <h3 style="margin: 0 0 10px 0;">🚀 Accesos rápidos:</h3>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="products.html" class="btn-action" style="text-decoration: none;">📦 Ver Productos</a>
+            <a href="add-product.html" class="btn-action" style="text-decoration: none;">➕ Añadir Producto</a>
+            <a href="movements.html" class="btn-action" style="text-decoration: none;">📊 Ver Movimientos</a>
+            <a href="providers.html" class="btn-action" style="text-decoration: none;">🤝 Ver Proveedores</a>
+          </div>
+        </div>
       </div>
     </section>
   </div>

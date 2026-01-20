@@ -75,8 +75,8 @@ function renderProductos(items) {
       <td>${prod.categoria || 'Sin categoría'}</td>
       <td>${prod.cantidad || 0}</td>
       <td>${prod.stockMinimo || 0}</td>
-      <td>$${parseFloat(prod.precioCompra || 0).toFixed(2)}</td>
-      <td>$${parseFloat(prod.precioVenta || 0).toFixed(2)}</td>
+      <td>$${parseInt(prod.precioCompra || 0)}</td>
+      <td>$${parseInt(prod.precioVenta || 0)}</td>
       <td>${prod.proveedor || 'Sin proveedor'}</td>
       <td>${estadoBadge}</td>
     `;
@@ -105,7 +105,7 @@ function renderProductos(items) {
 function actualizarBotonesAccion() {
   if (selectedProductStatus === 'Inactivo') {
     // Si está inactivo, mostrar botón de reactivar
-    editarBtn.style.display = 'none';
+    editarBtn.style.display = 'inline-block';
     eliminarBtn.style.display = 'none';
     reactivarBtn.style.display = 'inline-block';
   } else {

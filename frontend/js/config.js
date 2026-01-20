@@ -52,13 +52,25 @@ function showNotification(message, type = 'success') {
 // Función para verificar autenticación
 function checkAuth() {
   const token = localStorage.getItem('token');
-  if (!token && !window.location.pathname.includes('../html/index.html') && window.location.pathname !== '/') {
-    window.location.href = '../html/index.html';
+  const currentPage = window.location.pathname;
+
+  // ✅ Detecta correctamente si estamos en index.html
+  const isLoginPage = currentPage.endsWith('index.html') || 
+                      currentPage === '/' || 
+                      currentPage.endsWith('/');
+
+  // Si no hay token y NO estamos en login, redirigir
+  if (!token && !isLoginPage) {
+    window.location.href = 'index.html';
   }
 }
 
-// Verificar autenticación al cargar cualquier página
-if (!window.location.pathname.includes('../html/index.html') && window.location.pathname !== '/') {
+// ✅ Verificar autenticación solo si NO estamos en la página de login
+const currentPage = window.location.pathname;
+const isLoginPage = currentPage.endsWith('index.html') || 
+                    currentPage === '/' || 
+                    currentPage.endsWith('/');
+
+if (!isLoginPage) {
   checkAuth();
 }
-
