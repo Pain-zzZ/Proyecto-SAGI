@@ -1,9 +1,8 @@
-\- Git (control de versiones)
 📦 SAGI - Sistema Automático de Gestión de Inventarios
 
 
 
-📌 Descripción del Proyecto
+Descripción del Proyecto
 
 SAGI (Sistema Automático de Gestión de Inventarios) es una aplicación web desarrollada como proyecto formativo, cuyo objetivo es facilitar el control, registro y gestión de inventarios dentro de una organización.  
 
@@ -29,7 +28,7 @@ Este proyecto fue desarrollado aplicando conceptos de:
 
 
 
-🎯 Objetivo del Proyecto
+Objetivo del Proyecto
 
 Desarrollar una solución web que permita:
 
@@ -49,7 +48,7 @@ Desarrollar una solución web que permita:
 
 
 
-🛠️ Tecnologías Utilizadas
+Tecnologías Utilizadas
 
 
 
