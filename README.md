@@ -1,3 +1,4 @@
+\- Git (control de versiones)
 📦 SAGI - Sistema Automático de Gestión de Inventarios
 
 
@@ -86,7 +87,6 @@ Seguridad
 
 Herramientas
 
-\- Git (control de versiones)
 
 \- GitHub (repositorio remoto)
 
@@ -95,118 +95,3 @@ Herramientas
 \- Visual Studio Code
 
 \- Postman (pruebas de API)
-
-
-
----
-
-
-
-#### **Instalación**
-
-
-
-**---**
-
-
-
-**🗄️ Base de Datos**
-
-**El proyecto utiliza una base de datos \*\*MySQL\*\*.**
-
-
-
-**Dentro de la carpeta `/database` se encuentra el archivo:**
-
-
-
-**- `sagi_db.sql`**
-
-
-
-**Este archivo contiene:**
-
-**- Creación de la base de datos**
-
-**- Creación de las tablas**
-
-**- Inserción de datos de prueba**
-
-
-
-**📥 Importar la Base de Datos**
-
-**1. Abrir \*\*MySQL Workbench\*\***
-
-**2. Crear una conexión local**
-
-**3. Abrir el archivo `sagi_db.sql`**
-
-**4. Ejecutar el script completo**
-
-
-
-**---**
-
-
-
-**👤 Usuarios de Prueba**
-
-
-
-**| Rol           | Email             | Contraseña    |**
-
-**|---------------|-------------------|---------------|**
-
-**| Administrador | admin@sagi.com    | SAGI2026      |**
-
-**| Usuario       | maria@sagi.com    | SAGI2026      |**
-
-**| Usuario       | juan@sagi.com     | SAGI2026      |**
-
-
-
-**\*(Las contraseñas se almacenan encriptadas con bcrypt)\***
-
-
-
-**---**
-
-
-
-**🔐 Autenticación**
-
-**El sistema implementa autenticación basada en:**
-
-**- JSON Web Tokens (JWT)**
-
-**- Encriptación de contraseñas**
-
-**- Protección de rutas según autenticación**
-
-
-
-**---**
-
-
-
-**🚀 Ejecución del Proyecto**
-
-
-
-**Backend**
-
-**```bash**
-
-**npm install**
-
-**npm run dev**
-
-
-🔗 Repositorio
-
-El código fuente del proyecto se encuentra en el siguiente repositorio:
-
-👉 [https://github.com/Pain-zzZ/Proyecto-SAGI]
-
-
